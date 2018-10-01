@@ -50,7 +50,6 @@ var GameArea = {
     }    
     
     }
-//var component = function (x,y,color,width,height)
  
  function component(x,y,color,width,height)
  {
@@ -105,9 +104,6 @@ else if(this.x>380)
         var othertop = otherobj.y;
         var otherbottom = otherobj.y + (otherobj.height);
         var crash = false;
-        /*if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }*/
         if (mybottom<otherbottom&&mybottom>othertop&&myright>otherleft&&myleft<otherright)
             crash=true;
         return crash;
@@ -176,10 +172,9 @@ function stopMove() {
 //setInterval(timer,1000);
 function timer()
 {
-    
     Timer++;
-    //console.log(Timer);
     document.getElementById("score").innerHTML="score:    "  +  Timer;
 }
+
 </script>
 </html>
